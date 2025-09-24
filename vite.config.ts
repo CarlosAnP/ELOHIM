@@ -4,7 +4,7 @@ import path from "path" // <-- Agrega esta línea
 
 export default defineConfig({
   plugins: [react()],
-  // Agrega esta sección completa
+  base: '/ELOHIM/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
