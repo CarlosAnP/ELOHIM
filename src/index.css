@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------- */
+/* TEMA CLARO (AZULADO) 🧊       */
+/* ---------------------------------- */
+:root {
+  /* Fondo: Azul muy claro y suave */
+  --background: 220 50% 96%;
+  /* Texto Principal: Azul muy oscuro para contraste */
+  --foreground: 220 25% 10%;
+
+  /* Tarjeta: Blanca y limpia para que resalte sobre el fondo azulado */
+  --card: 0 0% 100%;
+  --card-foreground: 220 25% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 25% 10%;
+
+  /* Primario: Un azul vibrante y moderno */
+  --primary: 225 75% 55%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 215 30% 90%;
+  --secondary-foreground: 215 25% 20%;
+
+  --muted: 215 30% 90%;
+  --muted-foreground: 215 20% 45%;
+
+  --accent: 215 30% 90%;
+  --accent-foreground: 215 25% 20%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 30% 88%;
+  --input: 215 30% 88%;
+  --ring: 225 75% 55%;
+
+  --radius: 0.5rem;
+}
+
+/* ---------------------------------- */
+/* TEMA OSCURO (TARJETAS SUAVES) 🌙 */
+/* ---------------------------------- */
+.dark {
+  /* Fondo: Azul muy oscuro y profundo */
+  --background: 220 30% 8%;
+  /* Texto Principal: Casi blanco para legibilidad */
+  --foreground: 210 40% 98%;
+
+  /* Tarjeta: Un poco más clara que el fondo para que "flote" sutilmente */
+  --card: 220 30% 12%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 220 30% 8%;
+  --popover-foreground: 210 40% 98%;
+  
+  /* Primario: Azul brillante que resalta en la oscuridad */
+  --primary: 225 70% 65%;
+  --primary-foreground: 220 25% 10%;
+
+  --secondary: 215 20% 18%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 215 20% 18%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 215 20% 18%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 20% 18%;
+  --input: 215 20% 18%;
+  --ring: 225 70% 65%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+@layer base {
+  .card .card-description,
+  .card .card-content p,
+  .card .card-content li {
+    @apply text-base; /* O prueba con 'text-lg' si lo quieres aún más grande */
+  }
+}
